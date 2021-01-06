@@ -1,7 +1,7 @@
-# Imaging
+# About
 Software for imaging applications. The Python-based software allows post processing of mass spectrometric data (XIC/EIC/TIC/SIM), partially based on the PythonMSFileReader by F. Allain. The LabVIEW-based software allows screening of a region of interest divided in steps or scans using a laser diode with shutter, Zaber stage and a mass spectrometer. 
 
-## MAIN FEATURES ##
+## Main features ##
 Screening:
 - Offset correction in 3D
 - Steps and scan screening
@@ -14,25 +14,38 @@ Post processing:
 - conversion of .raw-data into TIC/XIC/EIC, based on on the PythonMSFileReader by F. Allain
 - algorithm-based, automated integration of peaks using signal thresholds, white- and blacklisting and plausability tests
 
+## Installation Guide Python scripts ##
 
-### INSTALLATION MSFileReader.PY ###
+### Installation MSFileReader.py ##
 The post processing script requires Python 3. On Windows, install Anaconda - https://www.anaconda.com/. The software was not tested on MacOS.
 The python script named "MSFileReader.py" is based on the MSFIleReader by ThermoFisherScientific. For more information on installation visit https://github.com/frallain/pymsfilereader
 
-### INSTALLATION INTEGRATIONTOOL.PY ###
+### Installation IntegrationTool.py ###
 The post processing script requires Python 3. On Windows, install Anaconda - https://www.anaconda.com/. The software was not tested on MacOS.
 The post processing python script named "IntegrationTool.py" requires numpy, scipy and the statistics package.
 
-In the windows console (start - cmd.exe), make sure python is properly installed and linked to the system variables by simply typing "python". You should be able to see your python version. Second, go back to the console using Ctrl+Z. Type
-
+In the windows console (start - cmd.exe), make sure python is properly installed and linked to the system variables by simply typing ```python```. You should be able to see your python version. Second, go back to the console using ```Ctrl+Z```. Type
+```
 pip install numpy scipy
+```
 
-## DISCLAIMER ##
-This software has not been excessively tested for safe use. Please use with great care. Upon usage, you accept the MIT licence agreement.
+### How To Use ###
+Go to favourite console (e.g. Start - cmd.exe) and simply type
+```
+python MSFileReader.py path/to/file.raw
+```
 
+for raw-to-ascii conversion into ".tsv" , then hit
 
+```
+python IntegrationTool.py path/to/file.raw.tsv
+```
 
-## INSTALLATION IMAGE.VI ###
+Please note that you need to set your parameters for integration, such as the signal threshold or the time interval between two signals ("amountspectra") and delay ("stagemovespectra") in numbers of spectra. These parameters depend on your sampling rate of the mass spectrometer and the ion current in arbitrary units. Please refer to the python script for debugging options.
+
+## Installation Guide LabVIEW script ##
+
+### Installation IMAGE.VI ###
 An electronic stage is needed to screen an user-defined region of interest. This VI is based on the Zaber T-LS28M ( https://www.zaber.com/products/linear-stages/T-LS/details/T-LS28M/features, WIKI: https://www.zaber.com/wiki/Manuals/T-LSM) and REQUIRES LabVIEW-driver from 
 
 INSTALL: https://www.zaber.com/software
@@ -41,7 +54,7 @@ The shutter, mass spectrometer and laser diode are either based on TTL signallin
 
 It is not recommended to work with the "build application (EXE)" function of LabVIEW, as it may cause unknown issues in operability. 
 
-## HOW TO USE ##
+### How To Use ###
 The software is mostly self-explanatory. If not, please refer to the comments inside the VI. If you still have problems, feel free to contact me at alex.k1993@ymail.com .
 
 ## IMPORTANT THOUGHTS ##
@@ -49,5 +62,5 @@ I'm always happy to see someone working with this project. I have spend lots of 
 
 Please also note that the stage and other electronic devices are generally susceptible to electromagnetic interference from unshielded electronic devices. Yes, you may need these tin foil hats again. No, I'm not joking. I had to do it myself.
 
-## DISCLAIMER ##
+## Disclaimer ##
 This software has not been excessively tested for safe use. Please use with great care. Upon usage, you accept the MIT licence agreement.
