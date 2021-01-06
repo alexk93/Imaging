@@ -3,16 +3,16 @@ Software for imaging applications. The Python-based software allows post process
 
 ## MAIN FEATURES ##
 Screening:
--- Offset correction in 3D
--- Steps and scan screening
--- user-defined application times, step widths and scan speeds
--- user-defined region of interest (ROI)
--- modular control of laser, shutter and stage
--- online readout of absolute stage position using internal memory
+- Offset correction in 3D
+- Steps and scan screening
+- user-defined application times, step widths and scan speeds
+- user-defined region of interest (ROI)
+- modular control of laser, shutter and stage
+- online readout of absolute stage position using internal memory
 
 Post processing:
--- conversion of .raw-data into TIC/XIC/EIC, based on on the PythonMSFileReader by F. Allain
--- algorithm-based, automated integration of peaks using signal thresholds, white- and blacklisting and plausability tests
+- conversion of .raw-data into TIC/XIC/EIC, based on on the PythonMSFileReader by F. Allain
+- algorithm-based, automated integration of peaks using signal thresholds, white- and blacklisting and plausability tests
 
 
 ### INSTALLATION MSFileReader.PY ###
