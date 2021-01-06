@@ -24,13 +24,13 @@ The python script named "MSFileReader.py" is based on the MSFIleReader by Thermo
 The post processing script requires Python 3. On Windows, install Anaconda - https://www.anaconda.com/. The software was not tested on MacOS.
 The post processing python script named "IntegrationTool.py" requires numpy, scipy and the statistics package.
 
-In the windows console (start - cmd.exe), make sure python is properly installed and linked to the system variables by simply typing ```python```. You should be able to see your python version. Second, go back to the console using ```Ctrl+Z```. Type
+In the windows console (start - ```cmd.exe```), make sure python is properly installed and linked to the system variables by simply typing ```python```. You should be able to see your python version. Second, go back to the console using ```Ctrl+Z```. Type
 ```
 pip install numpy scipy
 ```
 
 ### How To Use ###
-Go to favourite console (e.g. Start - cmd.exe) and simply type
+Go to favourite console (e.g. Start - ```cmd.exe```) and simply type
 ```
 python MSFileReader.py path/to/file.raw
 ```
@@ -40,6 +40,10 @@ for raw-to-ascii conversion into ".tsv" , then hit
 ```
 python IntegrationTool.py path/to/file.raw.tsv
 ```
+
+You can use the deployed batch script "helpfulBatchfile.bat" to iterate through hundreds of .raw- and .tsv-files. To do so, please set your path in the file and run the script from a windows console, i.e. Start - ```cmd.exe```, ``` cd PATH/TO/SCRIPTANDFILES/helpfulBatchfile.bat```
+
+Two files will be created in the directory of the script, the results and and an error file which lists "signals" excluded from the algorithm.
 
 Please note that you need to set your parameters for integration, such as the signal threshold or the time interval between two signals ("amountspectra") and delay ("stagemovespectra") in numbers of spectra. These parameters depend on your sampling rate of the mass spectrometer and the ion current in arbitrary units. Please refer to the python script for debugging options.
 
