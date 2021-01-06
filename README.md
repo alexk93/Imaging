@@ -49,7 +49,6 @@ Please note that you need to set your parameters for integration, such as the si
 
 ## Installation Guide LabVIEW script ##
 
-### Installation IMAGE.VI ###
 An electronic stage is needed to screen an user-defined region of interest. This VI is based on the Zaber T-LS28M ( https://www.zaber.com/products/linear-stages/T-LS/details/T-LS28M/features, WIKI: https://www.zaber.com/wiki/Manuals/T-LSM) and REQUIRES LabVIEW-driver from 
 
 INSTALL: https://www.zaber.com/software
