@@ -29,7 +29,7 @@ In the windows console (start - ```cmd.exe```), make sure python is properly ins
 pip install numpy scipy
 ```
 
-### How To Use ###
+## How To Use The Python Scripts ##
 Go to favourite console (e.g. Start - ```cmd.exe```) and simply type
 ```
 python MSFileReader.py path/to/file.raw
