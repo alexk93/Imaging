@@ -57,7 +57,7 @@ The shutter, mass spectrometer and laser diode are either based on TTL signallin
 
 It is not recommended to work with the "build application (EXE)" function of LabVIEW, as it may cause unknown issues in operability. 
 
-### How To Use ###
+## How To Use the LabVIEW VI ##
 The software is mostly self-explanatory. If not, please refer to the comments inside the VI. If you still have problems, feel free to contact me at alex.k1993@ymail.com .
 
 ## IMPORTANT THOUGHTS ##
