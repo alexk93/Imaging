@@ -66,4 +66,4 @@ I'm always happy to see someone working with this project. I have spend lots of 
 Please also note that the stage and other electronic devices are generally susceptible to electromagnetic interference from unshielded electronic devices. Yes, you may need these tin foil hats again. No, I'm not joking. I had to do it myself.
 
 ## Disclaimer ##
-This software has not been excessively tested for safe use. Please use with great care. Upon usage, you accept the MIT licence agreement.
+This software has not been excessively tested for safe use and may not be free of bugs. Please use with great care. Upon usage, you accept the MIT licence agreement.
