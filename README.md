@@ -1,6 +1,18 @@
 # Imaging
-Software for imaging applications. The Python-based software allows post processing of mass spectrometric data (XIC/EIC/TIC/SIM), partially based on the PythonMSFileReader by F. Allain. The LabVIEW-based software allows screening of a region of interest divided in steps or scans using a laser diode with shutter, Zaber stage and a mass spectrometer. An offset correction is performed in 3D
+Software for imaging applications. The Python-based software allows post processing of mass spectrometric data (XIC/EIC/TIC/SIM), partially based on the PythonMSFileReader by F. Allain. The LabVIEW-based software allows screening of a region of interest divided in steps or scans using a laser diode with shutter, Zaber stage and a mass spectrometer. 
 
+## MAIN FEATURES ##
+Screening:
+-- Offset correction in 3D
+-- Steps and scan screening
+-- user-defined application times, step widths and scan speeds
+-- user-defined region of interest (ROI)
+-- modular control of laser, shutter and stage
+-- online readout of absolute stage position using internal memory
+
+Post processing:
+-- conversion of .raw-data into TIC/XIC/EIC, based on on the PythonMSFileReader by F. Allain
+-- algorithm-based, automated integration of peaks using signal thresholds, white- and blacklisting and plausability tests
 
 
 ### INSTALLATION MSFileReader.PY ###
@@ -25,7 +37,7 @@ An electronic stage is needed to screen an user-defined region of interest. This
 
 INSTALL: https://www.zaber.com/software
 
-The shutter, mass spectrometer and laser diode are either based on TTL signalling or a simple linear scale. For obvious reasons, the shutter and laser diode require a controller.
+The shutter, mass spectrometer and laser diode are either based on TTL signalling or a simple linear scale. For obvious reasons, the shutter and laser diode require a controller and an I/O device.
 
 It is not recommended to work with the "build application (EXE)" function of LabVIEW, as it may cause unknown issues in operability. 
 
