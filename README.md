@@ -1,0 +1,2 @@
+# Imaging
+Software for imaging applications. The Python-based software allows post processing of mass spectrometric data (XIC/EIC/TIC/SIM), partially based on the PythonMSFileReader by F. Allain. The LabVIEW-based software allows screening of a region of interest divided in steps or scans using a laser diode with shutter, Zaber stage and a mass spectrometer. An offset correction is performed in 3D
