@@ -58,7 +58,7 @@ The shutter, mass spectrometer and laser diode are either based on TTL signallin
 It is not recommended to work with the "build application (EXE)" function of LabVIEW, as it may cause unknown issues in operability. 
 
 ## How To Use the LabVIEW VI ##
-The software is mostly self-explanatory. If not, please refer to the comments inside the VI. If you still have problems, feel free to contact me at github.alexk93@yahoo.com .
+The software is mostly self-explanatory. If not, please refer to the comments inside the VI. If you still have problems, feel free to contact me at github.alexk93@gmail.com .
 
 ## IMPORTANT THOUGHTS ##
 I'm always happy to see someone working with this project. I have spend lots of time coding this VI and I know that there is still plently of room for improvements, especially in clearing the algorithm. However, I'm very happy that I was able to "finish" my first big LabVIEW project. 99% of this work was done single-handedly by myself and at some points, things got crazy.
