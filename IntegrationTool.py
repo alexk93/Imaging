@@ -84,7 +84,7 @@ with open('errfile.log', 'a') as f2:
                     integrationpeak = integrate.cumtrapz(peakintegration) #integrates for each list record and adds to the initial value. Therefore, the last value (per list) is the one needed.
                     #print("integrated:"+str(num))#+":"+str(row)+":"+str(integrationpeak[-1])) #Debugging
                     #print("integrated:"+str(num)+":"+str(formernum)+":"+str(spectradiff)+":"+str(shot)) #Debugging
-                    yerr.append(stats.stdev(peakintegration)) #integrates for each list record and adds to the initial value. Therefore, the last value (per list) is the one needed.
+                    #yerr.append(stats.stdev(peakintegration)) #integrates for each list record and adds to the initial value. Therefore, the last value (per list) is the one needed.
                     area.append(integrationpeak[-1]) #only last element, see above.
                 else:
                     #print("integrated:"+str(num))#+":"+str(formernum)+":"+str(spectradiff)+":"+str(shot)) #Debugging
