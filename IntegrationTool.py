@@ -52,8 +52,8 @@ with open(filename) as data:
 
 
 with open('errfile.log', 'a') as f2:
-    for num, row in enumerate(y, 1):
-        if(row >= threshold/1.0 and num-1 not in whitelist): #make threshold float.
+    for num, intensity in enumerate(y, 1):
+        if(intensity >= threshold/1.0 and num-1 not in whitelist): #make threshold float.
             abovethreshlist = [n for n in y[num:num+(signallength+deviation)]>=threshold/1.0] # For signals falling below the threshold. Nice list comprehension may suit the other loops as well, but are hard to get.
             # returns ooi error is the measurement is finished too fast.. should include error handling, but works almost every time
             if ( str(abovethreshlist).count("False") > 0 and str(abovethreshlist).count("True") > 0 ): #If the signal falls below threshold..
@@ -65,7 +65,7 @@ with open('errfile.log', 'a') as f2:
                         blacklist.append(n)
                     #print("blacklisted"+str(n)) # Debugging
             else:
-                peakintegration.append(row)    # Proper signal, add to integration list
+                peakintegration.append(intensity)    # Proper signal, add to integration list
                 #print("listed"+str(num)) #Debugging
         # check if not empty. Some peaks are in, integrate.  All values above threshold of the same shot are now added to peakintegration. Multiple lists are created. Each list represents a peak.                
         elif peakintegration and num-1 not in blacklist: 
@@ -82,7 +82,7 @@ with open('errfile.log', 'a') as f2:
                     #print(str(num)+":"+str(shot)) #Debugging
                 if(len(peakintegration)>1):
                     integrationpeak = integrate.cumtrapz(peakintegration) #integrates for each list record and adds to the initial value. Therefore, the last value (per list) is the one needed.
-                    #print("integrated:"+str(num))#+":"+str(row)+":"+str(integrationpeak[-1])) #Debugging
+                    #print("integrated:"+str(num))#+":"+str(intensity)+":"+str(integrationpeak[-1])) #Debugging
                     #print("integrated:"+str(num)+":"+str(formernum)+":"+str(spectradiff)+":"+str(shot)) #Debugging
                     #yerr.append(stats.stdev(peakintegration)) #integrates for each list record and adds to the initial value. Therefore, the last value (per list) is the one needed.
                     area.append(integrationpeak[-1]) #only last element, see above.
@@ -103,22 +103,22 @@ with open('errfile.log', 'a') as f2:
                 #print("Omitted:"+str(num)+":"+str(spectradiff)+":"+str(signalgap-deviation)+":"+str(signalgap+deviation)) #Very useful debugging
             integrationpeak = [] #important, as things go nasty if we dont empty the list after integration
             peakintegration = []
-        elif(row < threshold/1.0 and num not in blacklist): #handle the other peaks and store them somewhere..
-            belowthresholdpeaks.append(row)
+        elif(intensity < threshold/1.0 and num not in blacklist): #handle the other peaks and store them somewhere..
+            belowthresholdpeaks.append(intensity)
             #print("belowthreshold:"+str(num))
         elif num in blacklist:
             abovethreshlist = []
-            belowthresholdpeaks.append(row)
+            belowthresholdpeaks.append(intensity)
             peakintegration = []
             #print("blacklist"+str(num)) #Debugging
         else:
-            error.append(row)
+            error.append(intensity)
             print("FATAL ERROR:"+str(num)) # I think this should be left on, cause this should not happen
                 
     print("The threshold excluded peaks (usually noise) in "+str(filename)+":"+"\n"+"#####"+str(belowthresholdpeaks)+"######"+"\n", file=f2)
     print("Peaks of "+str(filename)+"above threshold failed plausbility tests:"+"\n"+"#####"+str(omittedpeaks)+"######"+"\n" , file=f2) 
     if(error):
-        print(" !!!!! Unknown error in "+str(filename)+" !!!!!! Check list threshold, list row and peakintegration", file=f2)
+        print(" !!!!! Unknown error in "+str(filename)+" !!!!!! Check list threshold, list intensity and peakintegration", file=f2)
 
 
     pattern =  re.compile(r'[^\d.,]+') #clear off anything other than ,. and floats
