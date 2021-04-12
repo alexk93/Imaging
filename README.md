@@ -30,9 +30,12 @@ pip install numpy scipy
 ```
 
 ## How To Use The Python Scripts ##
-Go to favourite console (e.g. Start - ```cmd.exe```), change dicrectory (```cd```) to the folder that includes the files and simply type
+Go to favourite console (e.g. Start - ```cmd.exe```), change dicrectory (cd) to the folder that includes the files and simply type
 ```
 python MSFileReader.py path/to/file.raw
+
+For the demo, hit ``` python MSFileReader.py demo_dataset.RAW ```
+
 ```
 
 for raw-to-ascii conversion into ".tsv" , then hit
@@ -40,6 +43,8 @@ for raw-to-ascii conversion into ".tsv" , then hit
 ```
 python IntegrationTool.py path/to/file.raw.tsv
 ```
+
+For the demo, hit ``` python IntegrationTool.py demo_dataset.RAW.TSV ```
 
 You can use the deployed batch script "helpfulBatchfile.bat" to iterate through hundreds of .raw- and .tsv-files. To do so, please set your path in the file and run the script from a windows console, i.e. Start - ```cmd.exe```, ``` cd PATH/TO/SCRIPTANDFILES/helpfulBatchfile.bat```
 
