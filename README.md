@@ -70,5 +70,8 @@ I'm always happy to see someone working with this project. I have spend lots of 
 
 Please also note that the stage and other electronic devices are generally susceptible to electromagnetic interference from unshielded electronic devices. Yes, you may need these tin foil hats again. No, I'm not joking. I had to do it myself.
 
+## USED ON ##
+This software was used on NI LabVIEW 2017 and Python 3.6.5. For imaging, the TSQ Vantage (ThermoFisher Scientific, USA) and a simple shutter (Sh 05; Controller, SC10, both Thorlabs, USA) were used. For more details, you may look at DOI: 10.1021/acs.analchem.0c00311 (will be changed with the proper DOI after publication).
+
 ## Disclaimer ##
 This software has not been excessively tested for safe use and may not be free of bugs. Please use with great care. Upon usage, you accept the MIT licence agreement.
