@@ -33,10 +33,10 @@ pip install numpy scipy
 Go to favourite console (e.g. Start - ```cmd.exe```), change dicrectory (cd) to the folder that includes the files and simply type
 ```
 python MSFileReader.py path/to/file.raw
+```
 
 For the demo, hit ``` python MSFileReader.py demo_dataset.RAW ```
 
-```
 
 for raw-to-ascii conversion into ".tsv" , then hit
 
