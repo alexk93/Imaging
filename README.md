@@ -50,7 +50,7 @@ You can use the deployed batch script "helpfulBatchfile.bat" to iterate through 
 
 Two files will be created in the directory of the script, the results and an error file which lists "signals" excluded from the algorithm. Each line in the signals file represents the integrated chromatograms of your input spectra using user-defined parameters. These lines can be read by any plotting software such as Origin.
 
-Please note that you need to set your parameters for integration, such as the signal threshold or the time interval between two signals ("amountspectra") and delay ("stagemovespectra") in numbers of spectra. These parameters depend on your sampling rate of the mass spectrometer and the ion current in arbitrary units. Please refer to the python script for debugging options.
+Please note that you need to set your parameters for integration, such as the signal threshold or the time interval between two signals ("signallength") and delay ("signalgap") in numbers of spectra. These parameters depend on your sampling rate of the mass spectrometer and the ion current in arbitrary units. Please refer to the python script for debugging options.
 
 ## Installation Guide LabVIEW script ##
 
