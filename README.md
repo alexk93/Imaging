@@ -30,7 +30,7 @@ pip install numpy scipy
 ```
 
 ## How To Use The Python Scripts ##
-Go to favourite console (e.g. Start - ```cmd.exe```) and simply type
+Go to favourite console (e.g. Start - ```cmd.exe```), change dicrectory (```cd```) to the folder that includes the files and simply type
 ```
 python MSFileReader.py path/to/file.raw
 ```
