@@ -43,7 +43,7 @@ python IntegrationTool.py path/to/file.raw.tsv
 
 You can use the deployed batch script "helpfulBatchfile.bat" to iterate through hundreds of .raw- and .tsv-files. To do so, please set your path in the file and run the script from a windows console, i.e. Start - ```cmd.exe```, ``` cd PATH/TO/SCRIPTANDFILES/helpfulBatchfile.bat```
 
-Two files will be created in the directory of the script, the results and an error file which lists "signals" excluded from the algorithm.
+Two files will be created in the directory of the script, the results and an error file which lists "signals" excluded from the algorithm. Each line in the signals file represents the integrated chromatograms of your input spectra using user-defined parameters. These lines can be read by any plotting software such as Origin.
 
 Please note that you need to set your parameters for integration, such as the signal threshold or the time interval between two signals ("amountspectra") and delay ("stagemovespectra") in numbers of spectra. These parameters depend on your sampling rate of the mass spectrometer and the ion current in arbitrary units. Please refer to the python script for debugging options.
 
