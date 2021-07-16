@@ -2496,7 +2496,7 @@ if __name__ == "__main__":
     pattern =  re.compile(r'[^\d.,]+')
     
     with open(rawfile.GetFileName()+'.tsv', 'wt') as f:  
-        for scan_number in range(1,rawfile.GetNumSpectra()):
+        for scan_number in range(1,rawfile.GetNumSpectra()+1):
             result = str(rawfile.GetMassListFromScanNum(scan_number))
             #works for other MS such as the LCQ: rawfile.GetChroData(startTime=rawfile.StartTime, endTime=rawfile.EndTime, massRange1="{}-{}".format(rawfile.LowMass, rawfile.HighMass), scanFilter="Q3MS"))#363,375 , Scanfilter full<=>SIM
             # GetMassListFromScanNum is a list of (m/z),(intensity) for each scan / RT. For TIC, all intensities must be summed.
